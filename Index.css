@@ -13,11 +13,6 @@ h1,h2,h3 {
     color: rgb(255, 255, 255)
 }
 
-p {
-    color:#ffffff
-}
-
-
 #menu {
 	background: #005A78;
 	color: #FFF;
@@ -99,40 +94,81 @@ p {
 	background: #F2F2F2;
 	color: #444444;
 }
-@media screen and (max-width: 800px){
-	#menu {position:relative}
-	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
-	#menu ul.sub-menus {width:100%;position:static;}
-	#menu ul.sub-menus a {padding-left:30px;}
-	#menu li {display:block;float:none;width:auto;}
-	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
-	#menu input {z-index:4}
-	#menu input:checked + label {color:white}
-	#menu input:checked + label:before {content:"\00d7"}
-	#menu input:checked ~ ul {display:block}
-}
 
+
+.container-fluid p{
+   
+    font-size: x-large;
+}
 
 .header {
    
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: #3a366c ;
-    justify-content: center;
-    display: flex;
     padding-right: 0%;
-    margin-right: 0%;
+    background-color: #3a366c ;
+    display: flex;
+    position: relative;
+    size: 100%;
 }
+
 
 .Imgbanner img{
 
     width: 10vw; 
     height: 10vw;
-    margin-top: 2vw;
-    margin-left: 3vw;
     animation: robot 1s ease-in infinite alternate;
    
 }
+
+
+.banner{
+
+    margin-left: 2%;
+    padding: 0%;
+    margin-top: 4%;
+    color: rgb(30, 205, 240); 
+    font-weight: bold;
+    
+}
+
+.banner p{
+
+    font-size: 40px;
+}
+
+
+.banner2{
+
+    margin-left: 2%;
+    padding: 0%;
+    margin-top: 5%;
+    color: rgb(192, 225, 231);
+    
+}
+
+
+.imgBx{
+
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 5%;
+}
+
+.imgBx img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
 
 @keyframes robot{
     0%{
@@ -151,55 +187,32 @@ p {
 }
 
 
-
-.banner{
-
-    margin-left: 4%;
-    padding: 0%;
-   
-}
-
-.banner p {
-    color: rgb(78, 213, 240);
-    font-weight: bold;
-    font-size: 5vw;
-    
-}
-
-/* .botao{
-    background-color: #ffcc00;
-    color: #003399;
-    padding: 16px 48px;
-    display: inline-block;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-} */
-
-/* .botao:hover {
-    background-color: #edbe00;
-} */
-
-
 .container-fluid{
    
     background-color: #272b2f;
+
 }
+
+.containertext{
+
+    padding-top: 4%;
+    padding-left: 2%;
+    color:#ffffff
+}
+
 
 .container-fluid h2{
    
     font-size: xx-large;
 }
-.container-fluid p{
-   
-    font-size: x-large;
-}
+
 
 .cartoes{
 
     display: flex;
     justify-content: center;
     background-color: #272b2f;
+    color:#ffffff
     
 }
 
@@ -214,6 +227,7 @@ p {
     text-align: center;
     padding: 100px;
     margin: 50px;
+    color:#ffffff
 }
 
 .cartao img{
@@ -228,7 +242,7 @@ p {
 }
 
 .cartao{
-    color:#003399
+    color:#ffffff
 }
 
 .cartao:hover {
@@ -242,4 +256,53 @@ p {
     background-color: transparent;
    
     border-color: #343a40;
+}
+
+
+
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .banner,
+      .banner2 {
+        margin: 10px 0;
+      }
+    
+      .imgBx {
+        position: relative;
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    
+      .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
+      .banner p,
+      .banner2 p {
+        font-size: 20px;
+      }
+    
 }
